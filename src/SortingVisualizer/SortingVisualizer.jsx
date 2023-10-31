@@ -17,8 +17,8 @@ componentDidMount() {
 
   resetArray() {
     const array = [];
-    for (let i = 0; i < 1000; i++) {
-      array.push(randomIntFromInterval(5, 1000));
+    for (let i = 0; i < 310; i++) {
+      array.push(randomIntFromInterval(5, 500));
     }
     this.setState({array});
   }
@@ -32,7 +32,10 @@ render() {
           <div
             className="array-bar"
             key={idx}
-            >{value}</div>
+            style={{
+                height: `${value}px`,
+              }}
+            ></div>
         ))}
       </div>
     );
